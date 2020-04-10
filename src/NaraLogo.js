@@ -24,7 +24,7 @@ export class NaraLogo extends LitElement {
       canPosition: true,
       canEditSource: false,
       gizmo: {
-        title: "Hax logo",
+        title: "NARA logo",
         description:
           "logo element for hax, obviously as a hax capable element.",
         icon: "icons:android",
