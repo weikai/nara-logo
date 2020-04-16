@@ -24,9 +24,9 @@ export class NaraLogo extends LitElement {
       canPosition: true,
       canEditSource: false,
       gizmo: {
-        title: "Hax logo",
+        title: "NARA logo",
         description:
-          "logo element for hax, obviously as a hax capable element.",
+          "logo element for NARA, obviously as a hax capable element.",
         icon: "icons:android",
         color: "green",
         groups: ["Logo"],
@@ -36,8 +36,8 @@ export class NaraLogo extends LitElement {
           }
         ],
         meta: {
-          author: "btopro",
-          owner: "The Pennsylvania State University"
+          author: "weikai",
+          owner: "National Archives and Records Administration"
         }
       },
       settings: {
@@ -45,7 +45,7 @@ export class NaraLogo extends LitElement {
         configure: [
           {
             attribute: "size",
-            description: "Size of the HAX logo to place",
+            description: "Size of the NARA logo to place",
             inputMethod: "select",
             options: {
               mini: "Mini",
@@ -94,7 +94,7 @@ export class NaraLogo extends LitElement {
    */
   render() {
     return html`
-      <img src="${this.__logo}" loading="lazy" alt="" />
+      <a href='https://www.archives.gov'><img src="${this.__logo}" loading="lazy" alt="National Archives" /></a>
     `;
   }
   /**
