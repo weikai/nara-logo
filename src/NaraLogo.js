@@ -73,6 +73,7 @@ export class NaraLogo extends LitElement {
   static get properties() {
     return {
       format: { type: String },
+      webcBasePath: { type: String },
       __logo: { type: String },
     };
   }
@@ -86,7 +87,7 @@ export class NaraLogo extends LitElement {
   constructor() {
     super();
     this.format = 'stack';
-    this.basePath = new URL('.', import.meta.url).pathname;
+    this.webcBasePath = '';
   }
 
   /**
@@ -107,11 +108,12 @@ export class NaraLogo extends LitElement {
           case 'stack':
           case 'horizontal':
           case 'eagle':
-            this.__logo = `${this.basePath}/nara-logo-${this[propName]}.svg`;
+            
+            this.__logo = `${this.webcBasePath}/node_modules/nara-logo/src/nara-logo-${this[propName]}.svg`;
             break;
           // this way if someone screws it up it still does something
           default:
-            this.__logo = `${this.basePath}/nara-logo-stack.svg`;
+            this.__logo = `${this.webcBasePath}/nara-logo-stack.svg`;
             break;
         }
       }
